@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Management</title>
+</head>
+<body>
+<h2>Account Management</h2>
+<div>
+    <h3>Create Account</h3>
+    <form action="#" th:action="@{/createAccount}" method="post">
+        Account No: <input type="text" name="accountNo" required /><br />
+        Name: <input type="text" name="name" required /><br />
+        Amount: <input type="number" name="amount" required /><br />
+        <input type="submit" value="Create Account" />
+    </form>
+</div>
+<div th:if="${message}">
+    <p th:text="${message}"></p>
+</div>
+<div>
+    <h3>Deposit</h3>
+    <form action="#" th:action="@{/deposit}" method="post">
+        Account No: <input type="text" name="accountNo" required /><br />
+        Amount: <input type="number" name="amount" required /><br />
+        PAN No (if > 50,000): <input type="text" name="panNumber" /><br />
+        <input type="submit" value="Deposit" />
+    </form>
+</div>
+<div>
+    <h3>Withdraw</h3>
+    <form action="#" th:action="@{/withdraw}" method="post">
+        Account No: <input type="text" name="accountNo" required /><br />
+        Amount: <input type="number" name="amount" required /><br />
+        <input type="submit" value="Withdraw" />
+    </form>
+</div>
+<div>
+    <h3>Check Balance</h3>
+    <form action="#" th:action="@{/checkBalance}" method="post">
+        Account No: <input type="text" name="accountNo" required /><br />
+        <input type="submit" value="Check Balance" />
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Balance</title>
+</head>
+<body>
+<h2>Check Balance</h2>
+<div th:if="${balance != null}">
+    <p>Your balance is: <span th:text="${balance}"></span></p>
+</div>
+<a href="/">Go Back</a>
+</body>
+</html>
